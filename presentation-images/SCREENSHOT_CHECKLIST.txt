@@ -1,0 +1,27 @@
+📸 SCREENSHOT CHECKLIST - Take these 6 images:
+
+1. ✅ hero.png
+   - Go to: http://localhost:5173/
+   - Capture: Full hero section with main title
+   
+2. ✅ bingo-cards.png
+   - Stay on home page, scroll down
+   - Capture: All 8 colorful cards section
+   
+3. ✅ agent-cards.png
+   - Click "AI agents" tab
+   - Capture: All 5 agent cards
+   
+4. ✅ monetize-dashboard.png
+   - Click any agent → "View final insights" → "Monetize" tab
+   - Capture: 3 charts + price points
+   
+5. ✅ games-grid.png
+   - Click "Games" tab
+   - Capture: All 6 game tiles
+   
+6. ✅ game-dashboard.png
+   - Click "Coin Master" game
+   - Capture: Full dashboard with metrics and chart
+
+Save all images to this folder!

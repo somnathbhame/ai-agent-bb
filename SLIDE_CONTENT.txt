@@ -1,0 +1,202 @@
+═══════════════════════════════════════════════════════════
+SLIDE 1: THE PROBLEM
+═══════════════════════════════════════════════════════════
+
+TITLE: The Problem
+
+HEADING: Game Studios Are Flying Blind
+
+CURRENT REALITY:
+• Weeks of manual QA to understand competitor mechanics
+• Expensive user research with limited sample sizes
+• Delayed insights - by the time you learn, competitors moved on
+• Guesswork monetization - no data on what actually works
+
+THE COST:
+📊 60% of PM time spent on competitor research
+💰 Millions lost on untested features
+⏰ 3-6 months to analyze competitors
+🎲 No visibility into segment treatment
+
+QUOTE:
+"We need to know what Coin Master shows whales vs F2P players... 
+but manual testing takes forever."
+— Every Game PM Ever
+
+═══════════════════════════════════════════════════════════
+SLIDE 2: THE SOLUTION
+═══════════════════════════════════════════════════════════
+
+TITLE: The Solution
+
+HEADING: AI Players That Decode Your Competitors
+
+[INSERT IMAGE: bingo-cards.png - THE 8 COLORFUL CARDS]
+
+SUBHEADING: What We Built
+Segmented AI agents trained on real player behavior that automatically 
+play competitor games, log every offer, and deliver insights in hours.
+
+THREE COLUMNS:
+
+🤖 5 AI Agents          👁️ Computer Vision     📊 Auto-Analysis
+Whales, dolphins,      See games like         FTUE paths, event
+casuals, veterans,     real players           cycles, monetization
+F2P players                                   funnels
+
+BOTTOM BANNER:
+✅ No SDK Required  ✅ No Code Changes  ✅ No Engineering Time
+
+STAT:
+We reverse-engineered 6 top games in 2 weeks
+(What used to take 6 months)
+
+═══════════════════════════════════════════════════════════
+SLIDE 3: HOW IT WORKS
+═══════════════════════════════════════════════════════════
+
+TITLE: How It Works
+
+HEADING: From Zero to Insights in 3 Steps
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1: Select Your Agent Segment
+
+[INSERT IMAGE: agent-cards.png]
+
+Choose from 5 behavioral profiles:
+• Veteran Spender (13-year player)
+• New Whale ($100+ in 90 days)
+• New F2P (Non-spender)
+• Dormant Returner (Lapsed user)
+• Feature Lover (Engaged non-spender)
+
+          ↓ ↓ ↓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2: Agents Play Automatically
+
+[INSERT IMAGE: game-dashboard.png]
+
+400+ automated sessions per month:
+✓ Authentic behavior
+✓ Full capture (screens, offers, timers)
+✓ Multi-session tracking
+✓ Pattern detection
+
+          ↓ ↓ ↓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3: Get Instant Insights
+
+[INSERT IMAGE: monetize-dashboard.png]
+
+Interactive dashboards showing:
+• What competitors show each segment
+• Monetization pressure points
+• Event frequency and structure
+• FTUE paths and drop-offs
+• Price testing strategies
+
+BOTTOM:
+🌐 Live Demo: [YOUR WEBSITE URL]
+
+═══════════════════════════════════════════════════════════
+SLIDE 4: INDUSTRY IMPACT
+═══════════════════════════════════════════════════════════
+
+TITLE: Industry Impact
+
+HEADING: 10x Faster. 60% Cost Savings. Real Results.
+
+THREE BIG STAT BOXES:
+
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│     ⚡      │    │     💰      │    │     🎯      │
+│             │    │             │    │             │
+│    10x      │    │   20-30%    │    │    60%      │
+│   FASTER    │    │   ARPDAU↑   │    │   COST↓     │
+│             │    │             │    │             │
+└─────────────┘    └─────────────┘    └─────────────┘
+
+PROVEN METRICS:
+
+⚡ Speed
+• 400+ automated tests/month (vs 20-30 manual)
+• Hours to insights (vs weeks of QA)
+• 20-30x more coverage
+
+💰 Revenue Impact
+• 20-30% ARPDAU increase applying competitor strategies
+• Optimized price points based on segment behavior
+• Better LiveOps tuned to market
+
+🎯 Product Efficiency
+• 60% reduction in PM research time
+• No engineering resources needed
+• Instant competitive intel
+
+REAL USE CASES:
+✅ Monetization: Discovered whales see 3x more offers in Monopoly GO
+✅ FTUE: Mapped exact tutorial flow reducing churn by 15%
+✅ Events: Decoded event cadence driving 40% revenue spikes
+✅ Retention: Found progression gates that hook Day 3-7 players
+
+QUOTE:
+"What used to take our team 3 months now takes 2 days."
+
+═══════════════════════════════════════════════════════════
+SLIDE 5: CALL TO ACTION
+═══════════════════════════════════════════════════════════
+
+TITLE: Why This Changes Everything
+
+HEADING: The Future of Game Development
+
+[OPTIONAL: INSERT hero.png OR games-grid.png AS BACKGROUND]
+
+THE SHIFT:
+From: Gut feeling and slow research
+  ↓
+To: AI-powered competitive intelligence at scale
+
+WHAT THIS ENABLES:
+
+For Product Teams:
+• Make data-driven decisions in real-time
+• Test competitor strategies before building
+• Optimize monetization with proven patterns
+• Ship features faster with validated designs
+
+For Studios:
+• Level the playing field against giants
+• Reduce development risk by 70%
+• Accelerate time-to-market for features
+• Increase ROI on product investments
+
+For the Industry:
+• Democratizes insights - indie = AAA intel
+• Raises the bar for all games
+• Speeds innovation 10x
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚀 READY TO DECODE YOUR COMPETITION?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NEXT STEPS:
+
+🌐 Live Demo
+   [YOUR WEBSITE URL]
+
+📅 Book a Call
+   See your competitor decoded live
+   [YOUR CALENDAR LINK]
+
+📧 Contact
+   [YOUR EMAIL]
+   [YOUR LINKEDIN]
+
+BOTTOM QUOTE:
+"Every studio will use AI agents within 2 years. Be first."
+
+═══════════════════════════════════════════════════════════

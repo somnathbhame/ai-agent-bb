@@ -1147,6 +1147,126 @@ body {
   color: #d1d5db;
 }
 
+/* Purchase History Panel Styles */
+.purchase-history-panel {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.purchase-history-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.purchase-item {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 8px;
+  padding: 0.875rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.purchase-item.purchased {
+  border-left: 3px solid #10b981;
+}
+
+.purchase-item.not-purchased {
+  border-left: 3px solid #6b7280;
+}
+
+.purchase-item:hover {
+  background: rgba(30, 41, 59, 0.7);
+  transform: translateX(4px);
+}
+
+.purchase-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.625rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.purchase-offer-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.purchase-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.625rem;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+}
+
+.purchase-status.status-purchased {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.purchase-status.status-skipped {
+  background: rgba(107, 114, 128, 0.15);
+  color: #9ca3af;
+  border: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+.purchase-prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.price-comparison {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.old-price {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.price-arrow {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.new-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.purchase-item.not-purchased .new-price {
+  color: #6b7280;
+}
+
+.price-discount {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
+  color: #0a0e1a;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
 .segment-image {
   width: 100%;
   border-radius: 0.6rem;
@@ -1420,6 +1540,158 @@ body {
   r: 6;
   fill: #34d399;
   filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.8));
+}
+
+/* Retain visualization styles */
+.retain-visualization {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+}
+
+.retention-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.retention-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.retention-bar-label {
+  min-width: 60px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.retention-bar-track {
+  flex: 1;
+  height: 24px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.retention-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s ease;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+.retention-bar-value {
+  min-width: 50px;
+  text-align: right;
+  font-weight: 700;
+  color: #10b981;
+  font-size: 0.95rem;
+}
+
+/* Trigger events visualization styles */
+.trigger-visualization {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+}
+
+.trigger-frequency-chart {
+  padding: 0.5rem;
+}
+
+.trigger-svg {
+  width: 100%;
+  height: auto;
+}
+
+.trigger-bar {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.trigger-bar:hover {
+  filter: brightness(1.3) drop-shadow(0 0 8px rgba(139, 92, 246, 0.6));
+}
+
+/* Personalize offers visualization styles */
+.personalize-visualization {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+}
+
+.offer-type-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.offer-type-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.offer-type-label {
+  min-width: 140px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.offer-type-track {
+  flex: 1;
+  height: 20px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.offer-type-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s ease;
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.4);
+}
+
+.offer-type-value {
+  min-width: 50px;
+  text-align: right;
+  font-weight: 600;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+}
+
+/* Archetypes visualization styles */
+.archetypes-visualization {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+}
+
+.archetypes-radar {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.archetypes-svg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
 .agent-price-points {

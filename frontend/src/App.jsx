@@ -463,6 +463,60 @@ function App() {
     return map[agent.id]
   }
 
+  // Get purchase data for segmented sales
+  const getSegmentPurchaseData = (agent, segmentIndex) => {
+    if (!agent) return []
+    
+    const segment1Data = {
+      1: [ // Veteran Spender
+        { offer: 'VIP Diamond Bundle', oldPrice: 280, newPrice: 300, purchased: true, discount: '50% OFF' },
+        { offer: 'Elite Room Access', oldPrice: 499, newPrice: 599, purchased: true, discount: 'LIMITED' },
+      ],
+      2: [ // New Whale
+        { offer: 'Starter Mega Pack', oldPrice: 99, newPrice: 149, purchased: true, discount: '2X VALUE' },
+        { offer: 'Premium Boost', oldPrice: 299, newPrice: 399, purchased: true, discount: 'BEST DEAL' },
+      ],
+      3: [ // New F2P
+        { offer: 'Welcome Bundle', oldPrice: 49, newPrice: 99, purchased: false, discount: '50% OFF' },
+        { offer: 'Starter Pack', oldPrice: 29, newPrice: 49, purchased: false, discount: 'NEW PLAYER' },
+      ],
+      4: [ // Feature Lover
+        { offer: 'Collection Booster', oldPrice: 149, newPrice: 199, purchased: true, discount: 'POPULAR' },
+        { offer: 'Event Pass', oldPrice: 199, newPrice: 249, purchased: false, discount: 'LIMITED TIME' },
+      ],
+      5: [ // Dormant Returner
+        { offer: 'Welcome Back Offer', oldPrice: 99, newPrice: 149, purchased: true, discount: 'COMEBACK' },
+        { offer: 'Reactivation Pack', oldPrice: 199, newPrice: 249, purchased: false, discount: '40% OFF' },
+      ],
+    }
+
+    const segment2Data = {
+      1: [ // Veteran Spender
+        { offer: 'Veteran Booster Pack', oldPrice: 399, newPrice: 499, purchased: true, discount: 'EXCLUSIVE' },
+        { offer: 'Loyalty Reward', oldPrice: 299, newPrice: 349, purchased: true, discount: 'VIP ONLY' },
+      ],
+      2: [ // New Whale
+        { offer: 'Power Bundle', oldPrice: 249, newPrice: 349, purchased: true, discount: '3X VALUE' },
+        { offer: 'Mega Coins Pack', oldPrice: 499, newPrice: 599, purchased: true, discount: 'HOT DEAL' },
+      ],
+      3: [ // New F2P
+        { offer: 'Daily Deal', oldPrice: 19, newPrice: 29, purchased: false, discount: 'DAILY' },
+        { offer: 'Mini Bundle', oldPrice: 49, newPrice: 79, purchased: false, discount: 'SAVE 40%' },
+      ],
+      4: [ // Feature Lover
+        { offer: 'Feature Unlock', oldPrice: 199, newPrice: 249, purchased: true, discount: 'NEW' },
+        { offer: 'Theme Collection', oldPrice: 149, newPrice: 199, purchased: false, discount: 'TRENDING' },
+      ],
+      5: [ // Dormant Returner
+        { offer: 'Re-entry Bundle', oldPrice: 149, newPrice: 199, purchased: true, discount: 'SPECIAL' },
+        { offer: 'Quick Start Pack', oldPrice: 99, newPrice: 149, purchased: false, discount: 'BONUS' },
+      ],
+    }
+
+    const dataMap = segmentIndex === 1 ? segment1Data : segment2Data
+    return dataMap[agent.id] || []
+  }
+
   const DEMO_DAYS = Array.from({ length: 31 }, (_, index) => index + 1)
   const DEMO_AVAILABLE_DAYS = [
     5, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 29,
@@ -1350,6 +1404,120 @@ function App() {
                               series={getAgentMonetizeSeries(selectedAgent)}
                             />
                           )}
+                          {section.title === 'Retain' && (
+                            <div className="retain-visualization">
+                              <div className="retention-bars">
+                                <div className="retention-bar-item">
+                                  <div className="retention-bar-label">Day 1</div>
+                                  <div className="retention-bar-track">
+                                    <div className="retention-bar-fill" style={{width: '95%', background: '#10b981'}}></div>
+                                  </div>
+                                  <div className="retention-bar-value">95%</div>
+                                </div>
+                                <div className="retention-bar-item">
+                                  <div className="retention-bar-label">Day 3</div>
+                                  <div className="retention-bar-track">
+                                    <div className="retention-bar-fill" style={{width: '78%', background: '#10b981'}}></div>
+                                  </div>
+                                  <div className="retention-bar-value">78%</div>
+                                </div>
+                                <div className="retention-bar-item">
+                                  <div className="retention-bar-label">Day 7</div>
+                                  <div className="retention-bar-track">
+                                    <div className="retention-bar-fill" style={{width: '62%', background: '#3b82f6'}}></div>
+                                  </div>
+                                  <div className="retention-bar-value">62%</div>
+                                </div>
+                                <div class="retention-bar-item">
+                                  <div className="retention-bar-label">Day 30</div>
+                                  <div className="retention-bar-track">
+                                    <div className="retention-bar-fill" style={{width: '45%', background: '#3b82f6'}}></div>
+                                  </div>
+                                  <div className="retention-bar-value">45%</div>
+                                </div>
+                              </div>
+                              <p className="gate-chart-label">Streak retention over checkpoints</p>
+                            </div>
+                          )}
+                          {section.title === 'Trigger events' && (
+                            <div className="trigger-visualization">
+                              <div className="trigger-frequency-chart">
+                                <svg className="trigger-svg" viewBox="0 0 400 140">
+                                  <rect x="20" y="100" width="60" height="40" fill="#8b5cf6" rx="4" className="trigger-bar" />
+                                  <rect x="100" y="60" width="60" height="80" fill="#8b5cf6" rx="4" className="trigger-bar" />
+                                  <rect x="180" y="40" width="60" height="100" fill="#a78bfa" rx="4" className="trigger-bar" />
+                                  <rect x="260" y="70" width="60" height="70" fill="#8b5cf6" rx="4" className="trigger-bar" />
+                                  <rect x="340" y="90" width="60" height="50" fill="#a78bfa" rx="4" className="trigger-bar" />
+                                  <text x="50" y="130" fill="#9ca3af" fontSize="12" textAnchor="middle">Sess 1</text>
+                                  <text x="130" y="130" fill="#9ca3af" fontSize="12" textAnchor="middle">Win</text>
+                                  <text x="210" y="130" fill="#9ca3af" fontSize="12" textAnchor="middle">Break</text>
+                                  <text x="290" y="130" fill="#9ca3af" fontSize="12" textAnchor="middle">Return</text>
+                                  <text x="370" y="130" fill="#9ca3af" fontSize="12" textAnchor="middle">Sess 2</text>
+                                </svg>
+                              </div>
+                              <p className="gate-chart-label">Event trigger frequency by session</p>
+                            </div>
+                          )}
+                          {section.title === 'Personalize offers' && (
+                            <div className="personalize-visualization">
+                              <div className="offer-type-bars">
+                                <div className="offer-type-item">
+                                  <div className="offer-type-label">Exclusive bundles</div>
+                                  <div className="offer-type-track">
+                                    <div className="offer-type-fill" style={{width: '92%', background: 'linear-gradient(90deg, #eab308 0%, #f59e0b 100%)'}}></div>
+                                  </div>
+                                  <div className="offer-type-value">High</div>
+                                </div>
+                                <div className="offer-type-item">
+                                  <div className="offer-type-label">Loyalty rewards</div>
+                                  <div className="offer-type-track">
+                                    <div className="offer-type-fill" style={{width: '85%', background: 'linear-gradient(90deg, #eab308 0%, #f59e0b 100%)'}}></div>
+                                  </div>
+                                  <div className="offer-type-value">High</div>
+                                </div>
+                                <div className="offer-type-item">
+                                  <div className="offer-type-label">Status rewards</div>
+                                  <div className="offer-type-track">
+                                    <div className="offer-type-fill" style={{width: '70%', background: 'linear-gradient(90deg, #3b82f6 0%, #6366f1 100%)'}}></div>
+                                  </div>
+                                  <div className="offer-type-value">Med</div>
+                                </div>
+                                <div className="offer-type-item">
+                                  <div className="offer-type-label">Generic sales</div>
+                                  <div className="offer-type-track">
+                                    <div className="offer-type-fill" style={{width: '25%', background: 'linear-gradient(90deg, #6b7280 0%, #9ca3af 100%)'}}></div>
+                                  </div>
+                                  <div className="offer-type-value">Low</div>
+                                </div>
+                              </div>
+                              <p className="gate-chart-label">Personalization strength by offer type</p>
+                            </div>
+                          )}
+                          {section.title === 'React to different player archetypes' && (
+                            <div className="archetypes-visualization">
+                              <div className="archetypes-radar">
+                                <svg className="archetypes-svg" viewBox="0 0 400 140">
+                                  <circle cx="200" cy="70" r="60" fill="rgba(139, 92, 246, 0.1)" stroke="#8b5cf6" strokeWidth="1" />
+                                  <circle cx="200" cy="70" r="40" fill="rgba(139, 92, 246, 0.1)" stroke="#8b5cf6" strokeWidth="1" strokeDasharray="4,4" />
+                                  <circle cx="200" cy="70" r="20" fill="rgba(139, 92, 246, 0.1)" stroke="#8b5cf6" strokeWidth="1" strokeDasharray="4,4" />
+                                  <line x1="200" y1="70" x2="200" y2="10" stroke="#6b7280" strokeWidth="1" />
+                                  <line x1="200" y1="70" x2="260" y2="70" stroke="#6b7280" strokeWidth="1" />
+                                  <line x1="200" y1="70" x2="200" y2="130" stroke="#6b7280" strokeWidth="1" />
+                                  <line x1="200" y1="70" x2="140" y2="70" stroke="#6b7280" strokeWidth="1" />
+                                  <polygon points="200,25 240,70 200,115 160,70" fill="rgba(139, 92, 246, 0.3)" stroke="#8b5cf6" strokeWidth="2" />
+                                  <circle cx="200" cy="25" r="5" fill="#8b5cf6" />
+                                  <circle cx="240" cy="70" r="5" fill="#8b5cf6" />
+                                  <circle cx="200" cy="115" r="5" fill="#8b5cf6" />
+                                  <circle cx="160" cy="70" r="5" fill="#8b5cf6" />
+                                  <text x="200" y="5" fill="#9ca3af" fontSize="11" textAnchor="middle">Achiever</text>
+                                  <text x="268" y="74" fill="#9ca3af" fontSize="11">Challenge</text>
+                                  <text x="200" y="145" fill="#9ca3af" fontSize="11" textAnchor="middle">Mastery</text>
+                                  <text x="118" y="74" fill="#9ca3af" fontSize="11" textAnchor="end">Status</text>
+                                </svg>
+                              </div>
+                              <p className="gate-chart-label">Emphasis on different reward motivations</p>
+                            </div>
+                          )}
                           {section.offers && section.offers.length > 0 && (
                             <ul className="insight-offer-list">
                               {(() => {
@@ -1543,6 +1711,27 @@ function App() {
                       Use this panel to represent your first common sale flow after the lobby
                       (e.g. Whale vs Casual scenario).
                     </p>
+                    <div className="purchase-history-panel">
+                      <h4 className="purchase-history-title">💰 Purchase History</h4>
+                      {getSegmentPurchaseData(selectedAgent, 1).map((purchase, idx) => (
+                        <div key={idx} className={`purchase-item ${purchase.purchased ? 'purchased' : 'not-purchased'}`}>
+                          <div className="purchase-header">
+                            <span className="purchase-offer-name">{purchase.offer}</span>
+                            <span className={`purchase-status ${purchase.purchased ? 'status-purchased' : 'status-skipped'}`}>
+                              {purchase.purchased ? '✓ PURCHASED' : '✗ NOT PURCHASED'}
+                            </span>
+                          </div>
+                          <div className="purchase-prices">
+                            <div className="price-comparison">
+                              <span className="old-price">₹{purchase.oldPrice}</span>
+                              <span className="price-arrow">→</span>
+                              <span className="new-price">₹{purchase.newPrice}</span>
+                            </div>
+                            <span className="price-discount">{purchase.discount}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </article>
                   <article
                     className="segment-hud-card"
@@ -1561,6 +1750,27 @@ function App() {
                       Use this panel to represent your second common sale flow after the lobby
                       (e.g. Lifecycle / feature-focused scenario).
                     </p>
+                    <div className="purchase-history-panel">
+                      <h4 className="purchase-history-title">💰 Purchase History</h4>
+                      {getSegmentPurchaseData(selectedAgent, 2).map((purchase, idx) => (
+                        <div key={idx} className={`purchase-item ${purchase.purchased ? 'purchased' : 'not-purchased'}`}>
+                          <div className="purchase-header">
+                            <span className="purchase-offer-name">{purchase.offer}</span>
+                            <span className={`purchase-status ${purchase.purchased ? 'status-purchased' : 'status-skipped'}`}>
+                              {purchase.purchased ? '✓ PURCHASED' : '✗ NOT PURCHASED'}
+                            </span>
+                          </div>
+                          <div className="purchase-prices">
+                            <div className="price-comparison">
+                              <span className="old-price">₹{purchase.oldPrice}</span>
+                              <span className="price-arrow">→</span>
+                              <span className="new-price">₹{purchase.newPrice}</span>
+                            </div>
+                            <span className="price-discount">{purchase.discount}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </article>
                 </div>
               </div>
